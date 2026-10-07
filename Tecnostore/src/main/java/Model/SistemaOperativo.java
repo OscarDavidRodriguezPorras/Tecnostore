@@ -3,7 +3,11 @@ package Model;
 public class SistemaOperativo {
     private int id;
     private String nombre;
-
+    
+    public SistemaOperativo(){
+        
+    }
+    
     public SistemaOperativo(int id, String nombre) {
         this.id = id;
         this.nombre = nombre;

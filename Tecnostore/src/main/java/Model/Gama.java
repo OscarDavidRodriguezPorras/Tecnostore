@@ -3,7 +3,11 @@ package Model;
 public class Gama {
     private int id;
     private String nombre;
-
+    
+    public Gama(){
+        
+    }
+    
     public Gama(int id, String nombre) {
         this.id = id;
         this.nombre = nombre;

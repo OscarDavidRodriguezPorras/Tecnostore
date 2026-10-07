@@ -8,7 +8,11 @@ public class Celular {
     private Gama gama;
     private double precio;
     private int stock;
-
+    
+    public Celular(){
+        
+    }
+    
     public Celular(int id, Marca marca, String modelo, SistemaOperativo sistemaoperativo, Gama gama, double precio, int stock) {
         this.id = id;
         this.marca = marca;

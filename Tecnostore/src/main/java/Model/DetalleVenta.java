@@ -6,7 +6,11 @@ public class DetalleVenta {
     int Cantidad;
     private double preciounitario;
     private double subtotal;
-
+    
+    public DetalleVenta(){
+        
+    }
+    
     public DetalleVenta(int id, Celular celular, int Cantidad, double preciounitario, double subtotal) {
         this.id = id;
         this.celular = celular;

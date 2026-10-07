@@ -13,7 +13,11 @@ public class Venta {
     private double subtotal;
     private double iva;
     private double total;
-
+    
+    public Venta(){
+        
+    }
+    
     public Venta(int id, Cliente cliente, Usuario vendedor, LocalDateTime fecha, double subtotal, double iva, double total) {
         this.id = id;
         this.cliente = cliente;
