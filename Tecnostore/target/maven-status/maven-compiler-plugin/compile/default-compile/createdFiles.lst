@@ -1,0 +1,11 @@
+com\java\tecnostore\Tecnostore.class
+Model\ItemVenta.class
+Model\Marca.class
+Model\SistemaOperativo.class
+dao\Conexion.class
+Model\Rol.class
+Model\usuario.class
+Model\Venta.class
+Model\Cliente.class
+Model\Celular.class
+Model\Gama.class
