@@ -59,5 +59,9 @@ public class Cliente {
         this.telefono = telefono;
     }
     
+    @Override
+    public String toString(){
+        return nombre + "-"+ identificacion;
+    }
     
 }

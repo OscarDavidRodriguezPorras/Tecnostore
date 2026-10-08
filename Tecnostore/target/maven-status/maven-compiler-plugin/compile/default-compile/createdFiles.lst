@@ -5,6 +5,7 @@ service\AuthService.class
 dao\CelularDAO.class
 Model\Cliente.class
 Model\Gama.class
+View\Validaciones.class
 dao\MarcaDAO.class
 View\MenuAdminView.class
 Controller\AuthController.class

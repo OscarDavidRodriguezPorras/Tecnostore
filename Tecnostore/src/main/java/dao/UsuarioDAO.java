@@ -23,11 +23,11 @@ public class UsuarioDAO {
     }
     
     public Usuario BuscarUsuario(String usuario){
-        String sql = "select u.id, u.nombre as nombre_usuario, u. usuario, u.password,"
-                     + "r.id ad rol_id, r.nombre as nombre_rol"
-                     + "from usuarios u"
-                     + "join roles r on u.id_rol = r.id"
-                     + "where u.usuario = ?";
+        String sql = "select u.id, u.nombre as nombre_usuario, u. usuario, u.password, "
+                     + "r.id as rol_id, r.nombre as nombre_rol "
+                     + "from usuarios u "
+                     + "join roles r on u.id_rol = r.id "
+                     + "where u.usuario = ? ";
         try (Connection c = new Conexion().conexion();
                 PreparedStatement ps = c.prepareStatement(sql)){
             ps.setString(1, usuario);
@@ -38,7 +38,7 @@ public class UsuarioDAO {
                 }
             }
         } catch (SQLException e){
-            throw new RuntimeException("Error al buscar suario: " + e.getMessage(),e);
+            throw new RuntimeException("Error al buscar usuario: " + e.getMessage(),e);
         }
         return null;
     }
