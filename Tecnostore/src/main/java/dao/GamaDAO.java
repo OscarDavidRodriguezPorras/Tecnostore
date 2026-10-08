@@ -38,7 +38,6 @@ public class GamaDAO {
         try(Connection c = new Conexion().conexion();
                 PreparedStatement ps = c.prepareStatement(sql)){
             ps.setInt(1, id);
-            
             try (ResultSet rs = ps.executeQuery()){
                 if(rs.next()){
                     return mapear(rs);
