@@ -79,5 +79,8 @@ public class Celular {
         this.stock = stock;
     }
     
-    
+    @Override
+    public String toString(){
+        return marca + " " + modelo + " | " + gama + " | " + precio + " | Stock: " + stock;
+    }
 }
