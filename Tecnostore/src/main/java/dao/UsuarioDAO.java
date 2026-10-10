@@ -42,4 +42,26 @@ public class UsuarioDAO {
         }
         return null;
     }
+    
+    public Usuario buscarId(int id) throws SQLException{
+        String sql = "select u.id, u.nombre as nombre_usuario, u.usuario, u.password, "
+                + "r.id as rol_id, r.nombre as nombre_rol "
+                + "from usuarios u "
+                + "join roles r on u.id_rol = r.id "
+                + "where u.id = ?";
+        
+        try(Connection c = new Conexion().conexion();
+                PreparedStatement ps = c.prepareStatement(sql)){
+            ps.setInt(1, id);
+            
+            try(ResultSet rs = ps.executeQuery()){
+                if(rs.next()){
+                    return mapear(rs);
+                }
+            }
+        }catch(SQLException e){
+            throw new RuntimeException("Error al buscar usuario por id: " + e.getMessage());
+        }
+        return null;
+    }
 }
