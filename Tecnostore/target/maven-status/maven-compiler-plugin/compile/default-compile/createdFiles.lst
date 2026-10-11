@@ -1,17 +1,17 @@
 service\ClienteService.class
 util\ReporteUtils.class
+util\Validaciones.class
 Model\Rol.class
 service\AuthService.class
 dao\CelularDAO.class
+Impuesto\Iva.class
 Model\Cliente.class
 Model\Gama.class
-View\Validaciones.class
 dao\MarcaDAO.class
 View\MenuAdminView.class
 Controller\AuthController.class
 Controller\ReporteController.class
 View\LoginView.class
-pattern\Iva.class
 View\CelularView.class
 dao\ClienteDAO.class
 dao\UsuarioDAO.class
@@ -19,6 +19,7 @@ Controller\VentaController.class
 View\ReporteView.class
 Model\Celular.class
 Main\Tecnostore.class
+Impuesto\CalculoImpuesto.class
 dao\VentaDAO.class
 dao\SistemaOperativoDAO.class
 Model\Marca.class
@@ -34,7 +35,5 @@ View\ClienteView.class
 dao\Conexion.class
 dao\GamaDAO.class
 Controller\ClienteController.class
-util\Validador.class
 service\CelularService.class
-pattern\CalculoImpuesto.class
 View\VentaView.class
