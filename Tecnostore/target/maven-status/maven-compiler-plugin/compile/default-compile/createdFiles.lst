@@ -2,7 +2,6 @@ service\ClienteService.class
 util\ReporteUtils.class
 util\Validaciones.class
 Model\Rol.class
-service\AuthService.class
 dao\CelularDAO.class
 Impuesto\Iva.class
 Model\Cliente.class
@@ -16,6 +15,7 @@ View\CelularView.class
 dao\ClienteDAO.class
 dao\UsuarioDAO.class
 Controller\VentaController.class
+service\LoginService.class
 View\ReporteView.class
 Model\Celular.class
 Main\Tecnostore.class
@@ -27,6 +27,7 @@ service\VentaService.class
 View\MenuVendedorView.class
 Model\Usuario.class
 Controller\CelularController.class
+exception\NegocioException.class
 Model\Venta.class
 Model\DetalleVenta.class
 util\ArchivoUtils.class

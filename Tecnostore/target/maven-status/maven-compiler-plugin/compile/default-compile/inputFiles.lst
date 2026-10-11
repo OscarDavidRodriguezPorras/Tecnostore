@@ -11,6 +11,7 @@ C:\Users\oscar\OneDrive\Documentos\NetBeansProjects\Tecnostore\src\main\java\dao
 C:\Users\oscar\OneDrive\Documentos\NetBeansProjects\Tecnostore\src\main\java\dao\SistemaOperativoDAO.java
 C:\Users\oscar\OneDrive\Documentos\NetBeansProjects\Tecnostore\src\main\java\dao\UsuarioDAO.java
 C:\Users\oscar\OneDrive\Documentos\NetBeansProjects\Tecnostore\src\main\java\dao\VentaDAO.java
+C:\Users\oscar\OneDrive\Documentos\NetBeansProjects\Tecnostore\src\main\java\exception\NegocioException.java
 C:\Users\oscar\OneDrive\Documentos\NetBeansProjects\Tecnostore\src\main\java\Impuesto\CalculoImpuesto.java
 C:\Users\oscar\OneDrive\Documentos\NetBeansProjects\Tecnostore\src\main\java\Impuesto\Iva.java
 C:\Users\oscar\OneDrive\Documentos\NetBeansProjects\Tecnostore\src\main\java\Main\Tecnostore.java
@@ -23,9 +24,9 @@ C:\Users\oscar\OneDrive\Documentos\NetBeansProjects\Tecnostore\src\main\java\Mod
 C:\Users\oscar\OneDrive\Documentos\NetBeansProjects\Tecnostore\src\main\java\Model\SistemaOperativo.java
 C:\Users\oscar\OneDrive\Documentos\NetBeansProjects\Tecnostore\src\main\java\Model\Usuario.java
 C:\Users\oscar\OneDrive\Documentos\NetBeansProjects\Tecnostore\src\main\java\Model\Venta.java
-C:\Users\oscar\OneDrive\Documentos\NetBeansProjects\Tecnostore\src\main\java\service\AuthService.java
 C:\Users\oscar\OneDrive\Documentos\NetBeansProjects\Tecnostore\src\main\java\service\CelularService.java
 C:\Users\oscar\OneDrive\Documentos\NetBeansProjects\Tecnostore\src\main\java\service\ClienteService.java
+C:\Users\oscar\OneDrive\Documentos\NetBeansProjects\Tecnostore\src\main\java\service\LoginService.java
 C:\Users\oscar\OneDrive\Documentos\NetBeansProjects\Tecnostore\src\main\java\service\VentaService.java
 C:\Users\oscar\OneDrive\Documentos\NetBeansProjects\Tecnostore\src\main\java\util\ArchivoUtils.java
 C:\Users\oscar\OneDrive\Documentos\NetBeansProjects\Tecnostore\src\main\java\util\ReporteUtils.java
