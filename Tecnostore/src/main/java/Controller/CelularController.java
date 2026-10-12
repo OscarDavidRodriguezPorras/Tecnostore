@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.Celular;
+import Model.Gama;
 import Model.Marca;
 import Model.SistemaOperativo;
 import dao.GamaDAO;
@@ -59,6 +60,8 @@ public class CelularController {
         return soDAO.listar();
     }
     
-    
+    public List<Gama> listarGamas(){
+        return gamaDAO.listar();
+    }
 }
     

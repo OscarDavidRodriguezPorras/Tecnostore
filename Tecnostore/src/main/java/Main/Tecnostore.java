@@ -1,47 +1,57 @@
 package Main;
 
-
-import Impuesto.Iva;
-import Model.Cliente;
-import Model.DetalleVenta;
+import Controller.CelularController;
+import Controller.ClienteController;
+import Controller.LoginController;
+import Controller.ReporteController;
+import Controller.VentaController;
 import Model.Usuario;
-import Model.Venta;
-import dao.ClienteDAO;
-import dao.UsuarioDAO;
-import exception.NegocioException;
+import View.CelularView;
+import View.ClienteView;
+import View.LoginView;
+import View.MenuAdminView;
+import View.MenuVendedorView;
+import View.ReporteView;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-import service.LoginService;
-import service.VentaService;
+import util.Validaciones;
+
+
 
 public class Tecnostore {
-
     public static void main(String[] args) throws SQLException {
-        VentaService vs = new VentaService(new Iva());
-        Cliente cliente = new ClienteDAO().buscarid(1);
-        Usuario vendedor = new UsuarioDAO().buscarId(2);
         
-        try{
-            List<DetalleVenta>carrito = new ArrayList<>();
-            carrito.add(vs.crearDetalle(3, 1));
-            
-            Venta v = vs.registrarVenta(cliente, vendedor, carrito);
-            
-            System.out.println("Venta id: " + v.getId());
-            System.out.println("Subtotal: " + v.getSubtotal());
-            System.out.println("Iva: " + v.getIva());
-            System.out.println("Total: " + v.getTotal());
-        }catch (NegocioException e){
-            System.out.println("Error de negocio: " + e.getMessage());
+     Validaciones v = new Validaciones();
+    LoginController lc = new LoginController();
+    CelularController cc = new CelularController();
+    ClienteController clienteC = new ClienteController();
+    VentaController vc = new VentaController();
+    ReporteController rc = new ReporteController();
+    
+    LoginView lv = new LoginView(lc, v);
+    CelularView cv = new CelularView(cc, v);
+    ClienteView ClienteV = new ClienteView(clienteC, v);
+    ReporteView rv = new ReporteView(rc, v);
+    MenuAdminView mav = new MenuAdminView(v, cv, ClienteV, rv);
+    MenuVendedorView mvd = new MenuVendedorView(v, vc, clienteC, ClienteV, cv);
+    
+     boolean seguir = true;
+        while (seguir) {
+            Usuario u = lv.mostrar();
+            if (u == null) {
+                System.out.println("Demasiados intentos fallidos. Programa terminado.");
+                break;
+            }
+            if (u.()) {
+                mav.mostrar(u);
+            } else {
+                mvd.mostrar(u);
+            }
+            lc.logout();
+
+            String salir = v.validarTexto("¿Desea cerrar el programa? (s/n):");
+            seguir = !salir.equalsIgnoreCase("s");
         }
-        
-        try{
-            vs.crearDetalle(15, 99);
-        }catch (NegocioException e){
-            System.out.println("Esperado: " + e.getMessage());
-        }
-        
-        
+        System.out.println("¡Hasta pronto!");
     }
 }
+    
