@@ -65,7 +65,7 @@ public class CelularDAO {
     }
     
     public void insertar(Celular c) throws SQLException{
-        String sql = "insert into celulares (marca id, modelo, sistema_operativo_id, gama_id, precio, stock) "
+        String sql = "insert into celulares (marca_id, modelo, sistema_operativo_id, gama_id, precio, stock) "
                 + "values (?, ?, ?, ?, ?, ?)";
         
         try(Connection con = new Conexion().conexion();

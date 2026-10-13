@@ -58,5 +58,13 @@ public class Usuario {
         this.rol = rol;
     }
     
+    public boolean Administrador(){
+        return rol != null && "ADMINISTRADOR".equalsIgnoreCase(rol.getNombre());
+    }
+    
+    @Override
+    public String toString(){
+        return nombre + " (" + Usuario + ") - " + rol;
+    }
     
 }

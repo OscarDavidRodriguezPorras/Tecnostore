@@ -8,7 +8,6 @@ Model\Cliente.class
 Model\Gama.class
 dao\MarcaDAO.class
 View\MenuAdminView.class
-Controller\AuthController.class
 Controller\ReporteController.class
 View\LoginView.class
 View\CelularView.class
@@ -36,5 +35,6 @@ View\ClienteView.class
 dao\Conexion.class
 dao\GamaDAO.class
 Controller\ClienteController.class
+Controller\LoginController.class
 service\CelularService.class
 View\VentaView.class

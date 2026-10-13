@@ -86,7 +86,7 @@ public class CelularView {
         }catch(NegocioException e){
             System.out.println("Error: " +e.getMessage());
         }catch(RuntimeException e){
-            System.out.println("Error del sistema, intentelo mas tarde");
+            System.out.println("Error del sistema, intentelo mas tarde" + e.getMessage());
         }
     }
     

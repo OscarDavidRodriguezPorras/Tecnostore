@@ -41,7 +41,7 @@ public class Tecnostore {
                 System.out.println("Demasiados intentos fallidos. Programa terminado.");
                 break;
             }
-            if (u.()) {
+            if (u.Administrador()) {
                 mav.mostrar(u);
             } else {
                 mvd.mostrar(u);
