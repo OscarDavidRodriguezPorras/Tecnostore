@@ -9,6 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import service.VentaService;
+import util.ArchivoUtils;
 
 public class VentaController {
     private final VentaService service = new VentaService(new Iva());
@@ -36,7 +37,16 @@ public class VentaController {
     public Venta confirmarVenta(Cliente cliente, Usuario vendedor) throws SQLException{
         Venta v = service.registrarVenta(cliente, vendedor, new ArrayList<>(carrito));
         carrito.clear();
+        generarReporte();
         return v;
+    }
+    
+    public void generarReporte()throws SQLException{
+        try{
+            ArchivoUtils.generarReporte(service.listar());
+        }catch(java.io.IOException e){
+            System.out.println("No se pudo generar " + ArchivoUtils.ARCHIVO_REPORTE + ": " + e.getMessage());
+        }
     }
     
     public void cancelarVenta(){

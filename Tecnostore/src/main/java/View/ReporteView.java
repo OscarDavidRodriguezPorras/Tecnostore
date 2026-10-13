@@ -23,6 +23,7 @@ public class ReporteView {
                                1. Celulares con bajo stock (<5)
                                2. Top 3 celulares mas vendidos
                                3. Ventas totales por mes
+                               4. Generar Reporte
                                0. Volver
                                """);
             op=v.validarEntero("Opcion: ");
@@ -31,6 +32,7 @@ public class ReporteView {
                     case 1 -> stockBajo();
                     case 2 -> top3();
                     case 3 -> ventasPorMes();
+                    case 4 -> generarArchivo();
                     case 0 -> {}
                     default -> System.out.println("Opcion invalida");
                 }
@@ -75,4 +77,13 @@ public class ReporteView {
         mapa.forEach((mes, total)->
             System.out.println(mes + " -> $ " + String.format("%,.0f", total)));
     }    
+    
+    private void generarArchivo() throws SQLException{
+        try{
+            controller.generarArchivo();
+            System.out.println("Archivo generado");
+        }catch(java.io.IOException e){
+            System.out.println("Error al generar el reporte" + e.getMessage());
+        }
+    }
 }

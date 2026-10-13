@@ -2,6 +2,7 @@ package Controller;
 
 import Impuesto.Iva;
 import Model.Celular;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.time.YearMonth;
 import java.util.List;
@@ -26,4 +27,8 @@ public class ReporteController {
     public Map<YearMonth, Double> ventasPorMes() throws SQLException{
         return ReporteUtils.ventasPorMes(ventaService.listar());
     }
+    
+    public void generarArchivo() throws SQLException, IOException{
+    util.ArchivoUtils.generarReporte(ventaService.listar());
+}
 }
