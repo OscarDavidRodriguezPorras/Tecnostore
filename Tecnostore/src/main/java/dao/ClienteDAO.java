@@ -70,6 +70,7 @@ public class ClienteDAO {
             ps.setString(2, c.getIdentificacion());
             ps.setString(3, c.getCorreo());
             ps.setString(4, c.getTelefono());
+            ps.setInt(5, c.getId());
             ps.executeUpdate();
         }catch (SQLException e) {
             throw new RuntimeException("Error al actualizar cliente: " + e.getMessage(), e);

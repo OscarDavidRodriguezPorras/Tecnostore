@@ -17,7 +17,7 @@ public class CelularService {
         if(!Validaciones.NoVacio(c.getModelo())){
             throw new NegocioException("El modelo no puede estar vacio");
         }
-        if(c.getMarca() == null || c.getSistemaoperativo() == null || c.getMarca() == null){
+        if(c.getMarca() == null || c.getSistemaoperativo() == null || c.getGama() == null){
             throw new NegocioException("Marca, sistema operativo y gama son obligatorios");
         }
         if(!Validaciones.Positivo(c.getPrecio())){

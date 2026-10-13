@@ -90,8 +90,8 @@ public class CelularDAO {
     }
     
     public void actualizar(Celular c) throws SQLException{
-        String sql = "update celulares set marca marca_id = ?, modelo = ?, sistema_operativo_id = ?, "
-                + "gama_id = ?, precio = ?, stock = ?, where id = ?";
+        String sql = "update celulares set marca_id = ?, modelo = ?, sistema_operativo_id = ?, "
+        + "gama_id = ?, precio = ?, stock = ? where id = ?";
         
         try (Connection con = new Conexion().conexion();
                 PreparedStatement ps = con.prepareStatement(sql)){
@@ -101,6 +101,7 @@ public class CelularDAO {
             ps.setInt(4, c.getGama().getId());
             ps.setDouble(5, c.getPrecio());
             ps.setInt(6, c.getStock());
+            ps.setInt(7, c.getId());
             ps.executeUpdate();
         }catch (SQLException e){
             throw new RuntimeException("Error al atualizar el celular: " +e.getMessage());

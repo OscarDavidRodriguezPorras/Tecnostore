@@ -73,6 +73,6 @@ public class ReporteView {
             return;
         }
         mapa.forEach((mes, total)->
-            System.out.println(mes + " -> $ " + String.format("%,.Of", total)));
+            System.out.println(mes + " -> $ " + String.format("%,.0f", total)));
     }    
 }

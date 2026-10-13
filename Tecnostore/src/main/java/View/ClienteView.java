@@ -83,7 +83,7 @@ public class ClienteView {
         }catch(NegocioException e){
             System.out.println("Error: " + e.getMessage());
         }catch(RuntimeException e){
-            System.out.println("error del sistema, intente mas tarde");
+            System.out.println("error del sistema, intente mas tarde" + e.getMessage());
         }
     }
 }

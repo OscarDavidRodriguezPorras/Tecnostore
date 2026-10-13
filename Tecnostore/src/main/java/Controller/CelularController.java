@@ -17,31 +17,31 @@ public class CelularController {
     private final SistemaOperativoDAO soDAO = new SistemaOperativoDAO();
     private final GamaDAO gamaDAO = new GamaDAO();
     
-    private Celular armar(int marcaId, int soId, String modelo, int gamaId, int stock, double precio, int stock1){
-        Celular c = new Celular();
-        c.setMarca(marcaDAO.buscarId(marcaId));
-        c.setModelo(modelo);
-        c.setSistemaoperativo(soDAO.buscarId(soId));
-        c.setGama(gamaDAO.buscarId(gamaId));
-        c.setPrecio(precio);
-        c.setStock(stock);
-        return c;
-    }
+    private Celular armar(int marcaId, String modelo, int soId, int gamaId, double precio, int stock){
+    Celular c = new Celular();
+    c.setMarca(marcaDAO.buscarId(marcaId));
+    c.setModelo(modelo);
+    c.setSistemaoperativo(soDAO.buscarId(soId));
+    c.setGama(gamaDAO.buscarId(gamaId));
+    c.setPrecio(precio);
+    c.setStock(stock);
+    return c;
+}
     
     public Celular registrar(int marcaId, String modelo, int soId, int gamaId, double precio, int stock) throws SQLException{
-        Celular c = armar(marcaId, soId, modelo, gamaId, stock, precio, stock);
+        Celular c = armar(marcaId, modelo, soId, gamaId, precio, stock);
         service.registrar(c);
         return c;
     }
     
     public void actualizar(int id, int marcaId, String modelo, int soId, int gamaId, double precio, int stock) throws SQLException{
-        Celular c = armar(id, marcaId, modelo, soId, gamaId, precio, stock);
+        Celular c = armar(marcaId, modelo, soId, gamaId, precio, stock);
         c.setId(id);
         service.actualizar(c);
     }
     
     public void eliminar(int id) throws SQLException{
-        service.buscarId(id);
+        service.eliminar(id);
     }
     
     public List<Celular> listar(){

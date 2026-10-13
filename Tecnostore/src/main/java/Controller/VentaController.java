@@ -15,7 +15,13 @@ public class VentaController {
     private final List<DetalleVenta> carrito = new ArrayList<>();
     
     public DetalleVenta agregarCarrito(int celularId, int cantidad) throws SQLException{
-        DetalleVenta d = service.crearDetalle(celularId, cantidad);
+        int YaenCarrito = carrito.stream()
+                .filter(x->x.getCelular().getId() == celularId)
+                .mapToInt(DetalleVenta::getCantidad).sum();
+        
+        DetalleVenta d = service.crearDetalle(celularId, cantidad +  YaenCarrito);
+        carrito.removeIf(x->x.getCelular().getId() == celularId);
+        carrito.add(d);
         return d;
     }
     
