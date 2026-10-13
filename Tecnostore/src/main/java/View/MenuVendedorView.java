@@ -50,7 +50,7 @@ public class MenuVendedorView {
     private void registrarVenta(Usuario vendedor) throws SQLException{
         ventaC.cancelarVenta();
         System.out.println("\n -- Registrar venta --");
-        String id = v.ValidarId("Id del cliente: ");
+        String id = v.ValidarId("Identificacion del cliente: ");
         Cliente cliente;
         try{
             cliente = clienteC.buscarIdentificacion(id);
