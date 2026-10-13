@@ -1,0 +1,103 @@
+--- Reporte de Ventas ---
+
+Venta # 1 | 2026-10-01 10:30
+Cliente: Oscar Rodriguez (1001001001)
+Vendedor: Carlos Pérez
+ - Samsung Galaxy S25 X1 | $3.999.000
+ Subtotal: $3.999.000
+ Iva: $759.810
+ Total: $4.758.810
+---------------------------------------------------------------
+Venta # 2 | 2026-10-02 14:20
+Cliente: Daniel Martinez (1001001002)
+Vendedor: Laura Gómez
+ - Xiaomi Redmi Note 14 X2 | $1.998.000
+ Subtotal: $1.998.000
+ Iva: $379.620
+ Total: $2.377.620
+---------------------------------------------------------------
+Venta # 3 | 2026-10-03 16:10
+Cliente: Sofia Hernandez (1001001003)
+Vendedor: Carlos Pérez
+ - Apple iPhone 15 X1 | $3.499.000
+ Subtotal: $3.499.000
+ Iva: $664.810
+ Total: $4.163.810
+---------------------------------------------------------------
+Venta # 4 | 2026-10-04 11:45
+Cliente: Andres Gomez (1001001004)
+Vendedor: Carlos Pérez
+ - Motorola Edge 50 Fusion X2 | $3.198.000
+ Subtotal: $3.198.000
+ Iva: $607.620
+ Total: $3.805.620
+---------------------------------------------------------------
+Venta # 5 | 2026-10-05 17:30
+Cliente: Valentina Perez (1001001005)
+Vendedor: Laura Gómez
+ - Xiaomi Xiaomi 14T X1 | $2.299.000
+ Subtotal: $2.299.000
+ Iva: $436.810
+ Total: $2.735.810
+---------------------------------------------------------------
+Venta # 6 | 2026-10-10 13:34
+Cliente: Oscar Rodriguez (1001001001)
+Vendedor: Carlos Pérez
+ - Samsung Galaxy A16 X1 | $699.000
+ Subtotal: $699.000
+ Iva: $132.810
+ Total: $831.810
+---------------------------------------------------------------
+Venta # 7 | 2026-10-10 13:37
+Cliente: Oscar Rodriguez (1001001001)
+Vendedor: Carlos Pérez
+ - Samsung Galaxy A16 X1 | $699.000
+ Subtotal: $699.000
+ Iva: $132.810
+ Total: $831.810
+---------------------------------------------------------------
+Venta # 8 | 2026-10-10 13:39
+Cliente: Oscar Rodriguez (1001001001)
+Vendedor: Carlos Pérez
+ - Samsung Galaxy A16 X1 | $699.000
+ Subtotal: $699.000
+ Iva: $132.810
+ Total: $831.810
+---------------------------------------------------------------
+Venta # 9 | 2026-10-11 13:33
+Cliente: Oscar Rodriguez (1001001001)
+Vendedor: Carlos Pérez
+ - Samsung Galaxy A16 X1 | $699.000
+ Subtotal: $699.000
+ Iva: $132.810
+ Total: $831.810
+---------------------------------------------------------------
+Venta # 10 | 2026-10-13 11:17
+Cliente: David (1101261349)
+Vendedor: Carlos Pérez
+ - Motorola Moto G15 X4 | $2.796.000
+ Subtotal: $2.796.000
+ Iva: $531.240
+ Total: $3.327.240
+---------------------------------------------------------------
+Venta # 11 | 2026-10-13 11:18
+Cliente: David (1101261349)
+Vendedor: Carlos Pérez
+ - Samsung Galaxy S25 X1 | $3.999.000
+ - Motorola Moto G85 X1 | $1.199.000
+ Subtotal: $5.198.000
+ Iva: $987.620
+ Total: $6.185.620
+---------------------------------------------------------------
+Venta # 12 | 2026-10-13 16:00
+Cliente: David (1101261349)
+Vendedor: Carlos Pérez
+ - Motorola Moto G85 X1 | $1.199.000
+ - Motorola Moto G15 X1 | $699.000
+ Subtotal: $1.898.000
+ Iva: $360.620
+ Total: $2.258.620
+---------------------------------------------------------------
+
+Ventas registradas: 12
+Total general: $32.940.390

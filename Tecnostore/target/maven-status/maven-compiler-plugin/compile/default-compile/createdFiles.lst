@@ -17,7 +17,6 @@ Controller\VentaController.class
 service\LoginService.class
 View\ReporteView.class
 Model\Celular.class
-Main\Tecnostore.class
 Impuesto\CalculoImpuesto.class
 dao\VentaDAO.class
 dao\SistemaOperativoDAO.class
@@ -37,4 +36,4 @@ dao\GamaDAO.class
 Controller\ClienteController.class
 Controller\LoginController.class
 service\CelularService.class
-View\VentaView.class
+Main\Main.class
