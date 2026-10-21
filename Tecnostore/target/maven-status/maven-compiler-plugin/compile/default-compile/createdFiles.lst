@@ -19,6 +19,7 @@ View\ReporteView.class
 Model\Celular.class
 Impuesto\CalculoImpuesto.class
 dao\VentaDAO.class
+service\AlertaStockService.class
 dao\SistemaOperativoDAO.class
 Model\Marca.class
 service\VentaService.class

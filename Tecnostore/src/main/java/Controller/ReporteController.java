@@ -7,17 +7,19 @@ import java.sql.SQLException;
 import java.time.YearMonth;
 import java.util.List;
 import java.util.Map;
-import service.CelularService;
+import service.AlertaStockService;
+import static service.AlertaStockService.UMBRAL;
 import service.VentaService;
 import util.ReporteUtils;
+import service.AlertaStockService;
 
 public class ReporteController {
     
-    private final CelularService celularService = new CelularService();
+    private final AlertaStockService alertaService = new AlertaStockService();
     private final VentaService ventaService = new VentaService(new Iva());
     
     public List<Celular> stockBajo(){
-        return ReporteUtils.stockBajo(celularService.listar());
+        return ReporteUtils.stockBajo(alertaService.obtenerStockBajo());
     }
     
     public List<Map.Entry<String, Integer>> top3MasVendidos() throws SQLException{

@@ -150,4 +150,21 @@ public class CelularDAO {
             throw new RuntimeException("Error al acutalizar el stock: " + e.getMessage());
         }
     }
+    
+    public List<Celular> listarStockBajo(){
+        List<Celular> lista = new ArrayList<>();
+        String sql = "select from celulares where stock =< 5";
+        
+        try (Connection c = new Conexion().conexion();
+                PreparedStatement ps = c.prepareStatement(sql);
+                ResultSet rs = ps.executeQuery()){
+            
+            while(rs.next()){
+                lista.add(mapear(rs));
+            }
+        }catch (SQLException e){
+            throw new RuntimeException("Error al listar celulares: "+e.getMessage());
+        }
+        return lista;
+    } 
 }
