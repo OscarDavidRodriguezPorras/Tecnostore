@@ -18,8 +18,17 @@ public class ReporteController {
     private final AlertaStockService alertaService = new AlertaStockService();
     private final VentaService ventaService = new VentaService(new Iva());
     
-    public List<Celular> stockBajo(){
-        return ReporteUtils.stockBajo(alertaService.obtenerStockBajo());
+        public List<Celular> stockBajo(){
+        return alertaService.obtenerStockBajo();
+    }
+
+    public List<String> formatearStockBajo(List<Celular> lista){
+        return alertaService.formatearLineas(lista);
+    }
+
+    public String generarArchivoStockBajo(List<Celular> lista) throws IOException{
+        alertaService.generarArchivo(lista);
+        return AlertaStockService.ARCHIVO;
     }
     
     public List<Map.Entry<String, Integer>> top3MasVendidos() throws SQLException{

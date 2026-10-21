@@ -2,6 +2,7 @@ package View;
 
 import Controller.ReporteController;
 import Model.Celular;
+import exception.NegocioException;
 import java.sql.SQLException;
 import util.Validaciones;
 
@@ -29,7 +30,7 @@ public class ReporteView {
             op=v.validarEntero("Opcion: ");
             try{
                 switch(op){
-                    case 1 -> stockBajo();
+                    case 1 -> mostrarAlertaStock();
                     case 2 -> top3();
                     case 3 -> ventasPorMes();
                     case 4 -> generarArchivo();
@@ -42,15 +43,22 @@ public class ReporteView {
         }while(op !=0);
     }
     
-    private void stockBajo(){
-        System.out.println("-- Stock Bajo --");
-        var lista = controller.stockBajo();
-        if(lista.isEmpty()){
-            System.out.println("no hay celulares con stock bajo");
-            return;
-        }
-        for(Celular c : lista){
-            System.out.println(c.getMarca()+ " " + c.getModelo() + " -> " + c.getStock() + "unidades");
+        public void mostrarAlertaStock(){
+        try{
+            var lista = controller.stockBajo();
+            System.out.println("\n--- ALERTA DE STOCK BAJO ---");
+            controller.formatearStockBajo(lista).forEach(System.out::println);
+
+            String r = v.validarTexto("¿Generar archivo stock_bajo.txt? (s/n): ");
+            if(r.equalsIgnoreCase("s")){
+                System.out.println("Archivo generado: " + controller.generarArchivoStockBajo(lista));
+            }
+        }catch(NegocioException e){
+            System.out.println(e.getMessage());
+        }catch(java.io.IOException e){
+            System.out.println("Error al escribir el archivo: " + e.getMessage());
+        }catch(RuntimeException e){
+            System.out.println("Error del sistema (revise la conexion): " + e.getMessage());
         }
     }
     
